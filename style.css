@@ -1,8 +1,8 @@
-   <meta charset="utf-8">
+
 nav {
   padding: 2rem;
-  position:fixed;
-}
+  position:fixed; 
+  }
 .first-img {
   width: 100vw;
 }
@@ -67,4 +67,9 @@ footer {
 }
 .flag-img {
   margin: 0 0.5rem;
+}
+
+#weather_txt{
+  text-align: center;
+  margin: 0 auto;
 }
