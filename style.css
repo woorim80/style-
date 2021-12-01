@@ -1,12 +1,35 @@
 @charset "utf-8";
 
+html, body{
+  margin: 0 auto;
+}
+
+#smallNav{
+  display: inline;
+  position: relative;
+  font-size: 1rem;
+  word-spacing: 2rem;
+  right: 3vw;
+}
+
+#smallNav a{
+  text-decoration: none;
+  color: rgba(0,0,0,.55);
+}
+
+#smallNav a:hover{
+  color: black;
+}
+
+
 nav {
   padding: 2rem;
   position:fixed; 
+  height: max-content;
   }
 
 .size{
-  margin:0 auto;
+  margin:8vh auto;
   width:80vw;
   text-align: center;
 }
@@ -23,6 +46,12 @@ nav {
   color: white;
   border-color: chocolate;
 }
+
+.btn-outline-success img{
+  width: 20px;
+  height: 20px;
+}
+
 .card:hover {
   transform: scale(1.05);
   transition: 0.5s ease-in-out;
@@ -69,6 +98,18 @@ footer {
   .mobile-footer {
     display: block;
   }
+  #smallNav{
+    display: inline;
+    position: relative;
+    font-size: 1rem;
+    word-spacing: 2rem;
+    margin-left: 1rem;
+    right: 3vw;
+  }
+
+  .d-flex{
+    margin-top: 1rem;
+  }
 }
 .col {
   padding-bottom: 1rem;
@@ -80,4 +121,5 @@ footer {
 #weather_txt{
   text-align: center;
   margin: 0 auto;
+  word-break:keep-all;
 }
