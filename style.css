@@ -2,10 +2,17 @@
 
 nav {
   padding: 2rem;
-  position:fixed;
+  position:fixed; 
+  }
+
+.size{
+  margin:0 auto;
+  width:80vw;
+  text-align: center;
 }
 .first-img {
-  width: 100vw;
+  width: 80vw;
+  height:70vh;
 }
 .btn-outline-success {
   color: chocolate;
@@ -68,4 +75,9 @@ footer {
 }
 .flag-img {
   margin: 0 0.5rem;
+}
+
+#weather_txt{
+  text-align: center;
+  margin: 0 auto;
 }
