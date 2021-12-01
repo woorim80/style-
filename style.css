@@ -1,10 +1,19 @@
 
+@charset "utf-8";
+
 nav {
   padding: 2rem;
   position:fixed; 
   }
+
+.size{
+  margin:0 auto;
+  width:80vw;
+  text-align: center;
+}
 .first-img {
-  width: 100vw;
+  width: 80vw;
+  height:70vh;
 }
 .btn-outline-success {
   color: chocolate;
