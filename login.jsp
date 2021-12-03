@@ -44,10 +44,7 @@
 						<from method="post" action="loginAction.jsp">
 							<h1 style="text-align: center;">LOGIN</h1>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="name" name="user ID" maxlength="20">
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="phone" name="user ID" maxlength="20">
+								<input type="text" class="form-control" placeholder="ID" name="user ID" maxlength="20">
 							</div>
 							<div class="form-group">
 								<input type="password" class="form-control" placeholder="비밀번호" name="user Password" maxlength="20">
