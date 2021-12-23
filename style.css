@@ -1,125 +1,144 @@
-@charset "utf-8";
-
-html, body{
-  margin: 0 auto;
+body {
+  margin: 0;
+  background-image: url("images/background.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Rajdhani", sans-serif;
 }
 
-#smallNav{
-  display: inline;
+.container {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  max-width: 800px;
+  border-top: 10px solid blanchedalmond;
+  border-bottom: 10px solid blanchedalmond;
+  height: 100%;
+  min-height: 100vh;
+}
+.input-area {
   position: relative;
-  font-size: 1rem;
-  word-spacing: 2rem;
-  right: 3vw;
+}
+.task-input {
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  width: 80%;
+  border: none;
+  border: 1px solid blanchedalmond;
+}
+.task-input:focus {
+  outline: none;
+  border-bottom: 3px solid blanchedalmond;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  transition: 0.5s;
+  padding-top: 35px;
 }
 
-#smallNav a{
-  text-decoration: none;
-  color: rgba(0,0,0,.55);
-}
-
-#smallNav a:hover{
-  color: black;
-}
-
-
-nav {
-  padding: 2rem;
-  position:fixed; 
-  height: max-content;
-  }
-
-.size{
-  margin:8vh auto;
-  width:80vw;
-  text-align: center;
-}
-.first-img {
-  width: 80vw;
-  height:70vh;
-}
-.btn-outline-success {
-  color: chocolate;
-  border-color: chocolate;
-}
-.btn-outline-success:hover {
-  background-color: chocolate;
-  color: white;
-  border-color: chocolate;
-}
-
-.btn-outline-success img{
-  width: 20px;
-  height: 20px;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  transition: 0.5s ease-in-out;
-}
-footer {
-  background: #19110b;
-  font-size: 14px;
-}
-.first-line {
-  color: white;
-  border-bottom: 1px solid #392d23;
-}
-.second-line a {
-  color: white;
-  text-decoration: none;
-}
-.flag {
-  color: white;
-}
-.mobile-footer {
-  border-top: 1px solid #392d23;
-  color: white;
-  text-align: center;
-  font-size: 1.125rem;
+.task-input + label > span {
   font-weight: 300;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  align-items: center;
-  display: none;
-}
-@media screen and (max-width: 48rem) {
-  .second-line {
-    padding: 0 2rem;
-  }
-
-  .flag {
-    display: none;
-  }
-
-  .first-line {
-    text-align: center;
-  }
-
-  .mobile-footer {
-    display: block;
-  }
-  #smallNav{
-    display: inline;
-    position: relative;
-    font-size: 1rem;
-    word-spacing: 2rem;
-    margin-left: 1rem;
-    right: 3vw;
-  }
-
-  .d-flex{
-    margin-top: 1rem;
-  }
-}
-.col {
-  padding-bottom: 1rem;
-}
-.flag-img {
-  margin: 0 0.5rem;
+  margin: 0;
+  position: absolute;
+  color: #8f8f8f;
+  font-size: 14px;
+  top: 6px;
+  left: 10px;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
 }
 
-#weather_txt{
-  text-align: center;
-  margin: 0 auto;
-  word-break:keep-all;
+.task-input:focus + label > span {
+  top: 0px;
+  color: #333;
+}
+
+.button-add {
+  border: none;
+  background-color: blanchedalmond;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+}
+.button-add:hover {
+  background-color: cadetblue;
+}
+.button-add:active {
+  background-color: #f3f4f6;
+  box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15),
+    0px 1px 1px rgba(81, 41, 10, 0.15);
+  transform: translateY(0.125rem);
+}
+
+.task-list-container {
+  border: 1px solid lightgray;
+  margin-top: 1em;
+  position: relative;
+}
+.tab-type {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+}
+
+.tab-type div {
+  padding: 1em;
+  cursor: pointer;
+}
+
+#tab-underline {
+  background-color: lightpink;
+  height: 4px !important;
+  position: absolute;
+  top: 52px;
+  left: 0px;
+  width: 48px;
+  transition: 0.5s;
+  padding: 0px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  position: relative;
+}
+.task span {
+  padding: 1em;
+}
+.button-box {
+  display: flex;
+}
+
+.button-box button {
+  height: 100%;
+  border: none;
+  width: 5em;
+  margin: 0;
+  background-color: white;
+  transition: 0.5s;
+}
+.button-box button :active {
+  position: relative;
+  top: 2px;
+}
+
+.button-box button:first-child:hover {
+  background-color: greenyellow;
+}
+.button-box button:nth-child(2):hover {
+  background-color: rgb(255, 0, 0, 0.3);
+}
+
+.fa-check {
+  color: limegreen;
+}
+
+.fa-trash {
+  color: red;
+}
+.fa-undo-alt {
+  color: lightslategray;
+}
+
+.task-done {
+  text-decoration: line-through;
+  background-color: lightgray;
+  transition: 0.5s;
 }
